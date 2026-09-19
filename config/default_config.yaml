@@ -1,0 +1,80 @@
+# ==============================================================================
+# Default Configuration - Kuwaiti Labor Law Benchmark (RAG + LLMs)
+# ==============================================================================
+
+paths:
+  # Corpus & question paths (defaults to sample data; override with ground truth path)
+  law_csv_path: "data/samples/sample_law_articles.csv"
+  qa_csv_path: "data/samples/sample_cases.csv"
+  output_dir: "data/generated"
+  index_dir: "data/index"
+
+data:
+  law_text_col: "article_text"
+  law_id_col: "article_number"
+  q_col: "case_text"
+  chunking:
+    enabled: false
+    chunk_words: 220
+    overlap_words: 40
+
+retrieval:
+  emb_name: "intfloat/multilingual-e5-large"
+  normalize_emb: true
+  top_k_dense: 30
+  top_k_final: 8
+  use_bm25: true
+  alpha_dense: 0.65 # Weight for dense score in hybrid retrieval (1 - alpha for BM25)
+
+generation:
+  force_citations: true
+  temperature: 0.2
+  top_p: 0.9
+  max_new_tokens: 500
+
+# Evaluator LLM configuration for LLM-as-a-judge
+evaluation:
+  evaluator_model: "deepseek-chat" # or "gemini-2.5-flash", "gpt-4o"
+  metrics:
+    - "completeness"
+    - "correctness"
+    - "fluency"
+
+# Configured generation LLMs
+models:
+  gpt4o:
+    type: "openai"
+    model_name: "gpt-4o"
+    max_new_tokens: 500
+    enabled: true
+
+  deepseek_api:
+    type: "deepseek_api"
+    model_name: "deepseek-chat"
+    max_new_tokens: 500
+    enabled: true
+
+  llama31_openrouter:
+    type: "openrouter"
+    model_name: "meta-llama/llama-3.1-70b-instruct"
+    max_new_tokens: 500
+    enabled: true
+
+  qwen:
+    type: "openrouter"
+    model_name: "qwen/qwen-2.5-72b-instruct"
+    max_new_tokens: 500
+    enabled: true
+
+  gemini_api:
+    type: "gemini_api"
+    model_name: "gemini-2.5-flash"
+    max_new_tokens: 500
+    enabled: true
+
+  allam_hf:
+    type: "hf"
+    hf_id: "humain-ai/ALLaM-7B-Instruct-preview"
+    load_4bit: true
+    max_new_tokens: 500
+    enabled: false # Set to true on CUDA/GPU machines

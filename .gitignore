@@ -1,0 +1,74 @@
+# ==============================================================================
+# Git Ignore Configuration - Kuwaiti Labor Law Benchmark
+# ==============================================================================
+
+# Private Ground Truth Datasets & Corpus Data
+ground truth datasets/
+ground\ truth\ datasets/
+data/ground_truth/
+data/raw/
+data/index/
+*.faiss
+*.pkl
+*.npy
+
+# Environment variables and API secrets
+.env
+.env.*
+!.env.example
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python bytecode and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDE and Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Generated experiment outputs / large logs (optional caches)
+logs/
+*.log
