@@ -4,9 +4,6 @@ This directory contains the datasets and corpora used by **SLED** (*Evaluating L
 
 ```
 data/
-├── ground_truth/         # [GIT-IGNORED] Private benchmark datasets (placed locally)
-│   ├── legal_cases_gold.csv
-│   └── Kuwiti Labor Law + LLMs - Dataset Part B.csv
 ├── samples/              # [TRACKED] Synthetic / sample data for testing and quick verification
 │   ├── sample_cases.csv
 │   └── sample_law_articles.csv
