@@ -33,9 +33,6 @@ kw-labor-law-benchmark/
 │   └── default_config.yaml        # Central configuration (retrieval, model, generation params)
 ├── data/
 │   ├── README.md                  # Data layout and schema documentation
-│   ├── ground_truth/              # [GIT-IGNORED] Private gold datasets (placed locally)
-│   │   ├── legal_cases_gold.csv
-│   │   └── Kuwiti Labor Law + LLMs - Dataset Part B.csv
 │   ├── samples/                   # [TRACKED] Mock/sample data for testing & reproduction
 │   │   ├── sample_cases.csv
 │   │   └── sample_law_articles.csv
