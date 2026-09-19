@@ -4,17 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Domain: Legal NLP](https://img.shields.io/badge/Domain-Arabic%20Legal%20NLP-green.svg)](#)
 
-Official research repository for the paper:  
-**"SLED: Evaluating LLMs as Answerers and Judges for Low-Resource Domain-Specific Legal QAs"**
-
-### Authors & Affiliations
-- **Osamah Abduljalil**¹
-- **Hessah Alfurih**²
-- **Waad Alhoshan**¹*
-
-¹ Department of Computer Science, Imam Mohammad Ibn Saud Islamic University (IMSIU), Riyadh, Saudi Arabia  
-² Department of Law, Leeds University, Leeds, United Kingdom  
-*\* Corresponding author*
+A reproducible research benchmark and framework for evaluating **Retrieval-Augmented Generation (RAG)** and **Large Language Models (LLMs)** on Arabic legal reasoning under the **Kuwaiti Labor Law (Law No. 6 of 2010)**.
 
 ---
 
