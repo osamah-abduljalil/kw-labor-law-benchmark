@@ -11,9 +11,6 @@ data/
 └── generated/            # Model outputs and benchmark generations
 ```
 
-## Ground Truth Data Policy
-In accordance with research and privacy protocols, the full ground truth datasets (placed locally in `data/ground_truth/`) are not committed to the remote repository.
-
 ### Expected Schemas
 
 #### 1. Legal Cases Gold (`legal_cases_gold.csv`):
