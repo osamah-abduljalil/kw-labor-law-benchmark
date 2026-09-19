@@ -1,22 +1,33 @@
-# Kuwaiti Labor Law Benchmark (KW-Labor-Law-Benchmark)
+# SLED: Evaluating LLMs as Answerers and Judges for Low-Resource Domain-Specific Legal QAs
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Domain: Legal NLP](https://img.shields.io/badge/Domain-Arabic%20Legal%20NLP-green.svg)](#)
 
-A reproducible research benchmark and framework for evaluating **Retrieval-Augmented Generation (RAG)** and **Large Language Models (LLMs)** on Arabic legal reasoning under the **Kuwaiti Labor Law (Law No. 6 of 2010)**.
+Official research repository for the paper:  
+**"SLED: Evaluating LLMs as Answerers and Judges for Low-Resource Domain-Specific Legal QAs"**
+
+### Authors & Affiliations
+- **Osamah Abduljalil**¹
+- **Hessah Alfurih**²
+- **Waad Alhoshan**¹*
+
+¹ Department of Computer Science, Imam Mohammad Ibn Saud Islamic University (IMSIU), Riyadh, Saudi Arabia  
+² Department of Law, Leeds University, Leeds, United Kingdom  
+*\* Corresponding author*
 
 ---
 
 ## Overview
 
-Legal QA in civil law jurisdictions demands precise grounding in statutory provisions and court precedents. The **Kuwaiti Labor Law Benchmark** evaluates:
-1. **Hybrid Retrieval**: Dense multilingual embeddings (`intfloat/multilingual-e5-large` with FAISS) combined with sparse lexical matching (Okapi BM25).
-2. **Multi-Model Answer Generation**: Comparing state-of-the-art Arabic models (ALLaM-7B, DeepSeek-Chat, Google Gemini, OpenAI GPT-4o) across RAG-grounded and parametric (non-RAG) settings.
-3. **Automated LLM-as-a-Judge & Human Evaluation**: Multi-dimensional legal evaluation assessing:
+Legal QA in civil law jurisdictions demands precise grounding in statutory provisions and court precedents. **SLED** provides a comprehensive framework and benchmark to evaluate:
+1. **Hybrid Retrieval**: Dense multilingual embeddings (`intfloat/multilingual-e5-large` with FAISS) combined with sparse lexical matching (Okapi BM25) for Arabic statutory law.
+2. **LLMs as Answerers**: Comparing state-of-the-art LLMs (GPT-4o, DeepSeek-Chat, LLaMA-3.1-70B, Qwen-2.5-72B, ALLaM-7B, Gemini-2.5-Flash) across RAG-grounded and parametric (non-RAG) settings under the **Kuwaiti Labor Law (Law No. 6 of 2010)**.
+3. **LLMs as Judges**: Automated multi-dimensional legal evaluation against expert legal rubrics:
    - **Completeness**: Coverage of all necessary legal elements and statutory issues.
    - **Correctness**: Statutory interpretation and alignment with legal provisions.
    - **Fluency & Legal Drafting**: Professional Arabic legal discourse and structure.
+
 
 ---
 
@@ -215,12 +226,12 @@ print(result["answers"]["deepseek_api"])
 
 ## Citation
 
-If you use the Kuwaiti Labor Law Benchmark or code in your research, please cite:
+If you use this benchmark, code, or findings in your research, please cite our paper:
 
 ```bibtex
-@misc{kw_labor_law_benchmark2026,
-  title={Kuwaiti Labor Law Benchmark: Evaluating Retrieval-Augmented Generation and Large Language Models for Arabic Legal QA},
-  author={Abduljalil, Osamah and Collaborators},
+@article{abduljalil2026sled,
+  title={SLED: Evaluating LLMs as Answerers and Judges for Low-Resource Domain-Specific Legal QAs},
+  author={Abduljalil, Osamah and Alfurih, Hessah and Alhoshan, Waad},
   year={2026},
   publisher={GitHub},
   howpublished={\url{https://github.com/osamah-abduljalil/kw-labor-law-benchmark}}

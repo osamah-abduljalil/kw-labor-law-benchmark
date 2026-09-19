@@ -5,11 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "kw-labor-law-benchmark"
 version = "0.1.0"
-description = "Kuwaiti Labor Law RAG and LLM Evaluation Benchmark"
+description = "SLED: Evaluating LLMs as Answerers and Judges for Low-Resource Domain-Specific Legal QAs"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
-    { name = "Kuwaiti Labor Law Benchmark Research Team" }
+    { name = "Osamah Abduljalil" },
+    { name = "Hessah Alfurih" },
+    { name = "Waad Alhoshan" }
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

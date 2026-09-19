@@ -1,6 +1,6 @@
 # Data Directory Structure
 
-This directory contains the datasets and corpora used by the **Kuwaiti Labor Law Benchmark**.
+This directory contains the datasets and corpora used by **SLED** (*Evaluating LLMs as Answerers and Judges for Low-Resource Domain-Specific Legal QAs*).
 
 ```
 data/
